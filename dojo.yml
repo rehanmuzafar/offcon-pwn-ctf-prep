@@ -1,0 +1,36 @@
+id: offcon-pwn-ctf-prep
+name: OFFCON PCC Pwn Prep
+description: |
+  Multi-team binary exploitation prep for PCC.
+  Private dojo — Track A (heap) and Track B (foundations).
+type: hidden
+password: CHANGE_ME_STRONG_PASS
+modules:
+
+  - id: w0-fluency
+    name: "W0 — Toolchain & Fluency"
+    description: Sab yahan se — environment, gdb, assembly fluency.
+    challenges:
+      - import: { dojo: program-security, module: assembly-crash-course }
+      - import: { dojo: program-security, module: debugging-refresher }
+
+  - id: w1-stack
+    name: "W1 — Stack & Memory Errors"
+    challenges:
+      - import: { dojo: program-security, module: memory-errors }
+
+  - id: w2-shellcode-rev
+    name: "W2 — Shellcode & Reversing"
+    challenges:
+      - import: { dojo: program-security, module: shellcode-injection }
+      - import: { dojo: program-security, module: binary-reverse-engineering }
+
+  - id: w3-heap
+    name: "W3–W5 — Heap (the money category)"
+    challenges:
+      - import: { dojo: software-exploitation, module: dynamic-allocator-misuse }
+
+  - id: w6-advanced
+    name: "W6 — Advanced Exploitation"
+    challenges:
+      - import: { dojo: software-exploitation, module: program-interaction }
