@@ -4,7 +4,7 @@ description: |
   Multi-team binary exploitation prep for PCC.
   Private dojo — Track A (heap) and Track B (foundations).
 type: hidden
-password: CHANGE_ME_STRONG_PASS
+password: "PccPwnPreparation2026$"
 modules:
 
   - id: w0-fluency
