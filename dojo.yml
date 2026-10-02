@@ -1,36 +1,55 @@
 id: offcon-pwn-ctf-prep
 name: OFFCON PCC Pwn Prep
 description: |
-  Multi-team binary exploitation prep for PCC.
-  Private dojo — Track A (heap) and Track B (foundations).
+  PCC-tuned binary exploitation path, ordered by what actually scores at PCC.
+  All modules verified against pwn.college. W7 (file-struct) is the finals bar.
+  Also replay PCC 2024 finals binaries + how2heap/pwnable.tw alongside W6–W7.
 type: hidden
 password: "PccPwnPreparation2026$"
 modules:
 
-  - id: w0-fluency
-    name: "W0 — Toolchain & Fluency"
-    description: Sab yahan se — environment, gdb, assembly fluency.
+  - id: w0-onramp
+    name: "W0 — On-ramp (beginners only)"
     challenges:
-      - import: { dojo: program-security, module: assembly-crash-course }
-      - import: { dojo: program-security, module: debugging-refresher }
+      - import: { dojo: intro-to-cybersecurity, module: binary-exploitation }
 
-  - id: w1-stack
-    name: "W1 — Stack & Memory Errors"
+  - id: w1-reversing
+    name: "W1 — Reverse Engineering"
     challenges:
-      - import: { dojo: program-security, module: memory-errors }
+      - import: { dojo: program-security, module: reverse-engineering }
 
-  - id: w2-shellcode-rev
-    name: "W2 — Shellcode & Reversing"
+  - id: w2-foundation
+    name: "W2 — Stack / Memory / Shellcode / Canary (foundation #1)"
     challenges:
-      - import: { dojo: program-security, module: shellcode-injection }
-      - import: { dojo: program-security, module: binary-reverse-engineering }
+      - import: { dojo: program-security, module: program-security }
 
-  - id: w3-heap
-    name: "W3–W5 — Heap (the money category)"
+  - id: w3-rop
+    name: "W3 — Return Oriented Programming"
     challenges:
-      - import: { dojo: software-exploitation, module: dynamic-allocator-misuse }
+      - import: { dojo: program-security, module: return-oriented-programming }
 
-  - id: w6-advanced
-    name: "W6 — Advanced Exploitation"
+  - id: w4-format-string
+    name: "W4 — Format String Exploits"
     challenges:
-      - import: { dojo: software-exploitation, module: program-interaction }
+      - import: { dojo: software-exploitation, module: format-string-exploits }
+
+  - id: w5-heap-intro
+    name: "W5 — Heap: Dynamic Allocator Misuse"
+    challenges:
+      - import: { dojo: program-security, module: dynamic-allocator-misuse }
+
+  - id: w6-heap-adv
+    name: "W6 — Advanced Heap + Exploitation Primitives (the money)"
+    challenges:
+      - import: { dojo: software-exploitation, module: dynamic-allocator-exploitation }
+      - import: { dojo: software-exploitation, module: memory-mastery }
+
+  - id: w7-fsop
+    name: "W7 — File Struct Exploits / FSOP (PCC finals bar)"
+    challenges:
+      - import: { dojo: software-exploitation, module: file-struct-exploits }
+
+  - id: optional-kernel
+    name: "Optional — Kernel Exploitation (finals insurance, 1-2 ppl)"
+    challenges:
+      - import: { dojo: software-exploitation, module: kernel-exploitation }
